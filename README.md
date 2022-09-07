@@ -6,6 +6,9 @@ We consider a latent dynamical model to extract a (low dimensional) structure z 
 
 Goal:
 - fit a sequence of neural activity data to infer the latent variables that generate this data and the dynamics with which the latents evolve
+- compare the fit when the data is generated with Gaussian noise or with Poisson noise
 
 Implementation:
-- apply the Expectation Maximisation algorithm with the assumptions of linear dynamics in the latent space and Gaussian noise in the projection from latent variables to the neural activity space
+- generate two synthetic datasets from a *true* latent model, one with Gaussian observation noise and one with Poisson noise
+- apply the Expectation Maximisation algorithm on X with the assumptions of *linear dynamics* in the latent space and *Gaussian noise* in the projection from latent variables to the neural activity space
+- compare the fit of the two models
